@@ -161,7 +161,7 @@ html{scroll-padding-top:100px}
 #demo-button{min-height:54px;font-weight:900}
 @media(max-width:900px){.hs-startup-features{grid-template-columns:1fr}.hs-reservation-demo{grid-template-columns:1fr}.hs-reservation-guide{padding:20px}.hs-demo-banner{flex-direction:column;align-items:stretch}.hs-demo-banner .btn{text-align:center}}
 @media(max-width:760px){.hs-case-grid{grid-template-columns:1fr;gap:20px}.hs-case-figure figcaption{font-size:15px;padding:10px 14px}#strength{padding-block:20px 30px}.hs-reservation-guide h3{font-size:23px}.hs-widescreen{padding-inline:12px!important}}
-</style></head><body>
+.hs-why-image{padding:25px 0 40px!important;background:#f8fbff!important}.hs-why-image img{display:block;width:100%;height:auto;object-fit:contain;border-radius:16px;box-shadow:0 10px 30px #092a4115}.hs-model-disclaimer{font-size:12px;color:#687b89;text-align:center;line-height:1.7;margin:12px auto 0;max-width:1150px}@media(max-width:760px){.hs-why-image{padding:12px 0 25px!important}.hs-why-image img{border-radius:8px}}</style></head><body>
 <header class="top hs-real-header" id="page-top">
  <div class="hs-header-inner">
   <a class="hs-header-logo" href="#page-top"><img src="logo.png" alt="Happysugar Business Solutions"></a>
@@ -192,7 +192,7 @@ html{scroll-padding-top:100px}
 <section class="hs-offer-section" id="free-offer" aria-label="30分無料相談と簡単なアプリ試作のご案内"><div class="hs-banner-frame hs-offer-banner">
 <img src="free-consultation-banner.png" alt="30分無料相談とごく簡単なアプリの試作も無料。ヒアリングから簡単な試作までご相談いただけます。" loading="lazy" width="2112" height="704">
 <a class="hs-click-zone hs-offer-click" href="https://consult.happysugar.online/" aria-label="無料30分相談・簡単なアプリ試作を申し込む" title="無料相談・アプリ試作を申し込む"></a>
-</div></section><section class="shade" id="why"><div class="container"><div class="sectionhead"><div class="small">WHY BUSINESS IMPROVEMENT?</div><h2>なぜ、業務改善が<span class="orange">利益</span>につながるのか？</h2><p>作業を減らすだけで終わらせず、空いた時間をどこに使うかまで考えます。</p></div><div class="grid four"><div class="benefit"><div class="emoji">📋</div><h3>ムダな作業をなくす</h3><p>転記・確認・集計など、繰り返し作業を減らす</p></div><div class="benefit"><div class="emoji">⏱</div><h3>時間に余裕が生まれる</h3><p>本来の仕事や顧客対応に集中できる</p></div><div class="benefit"><div class="emoji">📈</div><h3>コストを見直す</h3><p>残業削減や対応力向上、機会損失の防止</p></div><div class="benefit"><div class="emoji">💰</div><h3>利益改善へ</h3><p>経費削減や粗利益増加につながる仕組みを目指す</p></div></div><div class="example"><div><b>例えば、1か月40時間の事務作業を削減できた場合</b><div class="fine">時給1,500円 × 40時間 × 12か月のモデル試算</div></div><div class="metric">年間72万円相当</div></div><p class="fine">※削減時間を人件費に換算した金額です。実際の人件費削減や利益増加には、残業削減・人員配置・売上への活用などが必要です。</p></div></section>
+</div></section><section class="shade hs-why-image" id="why"><div class="container hs-widescreen"><h2 class="visually-hidden">なぜ業務改善が利益につながるのか</h2><img src="why-business-improvement.png" alt="なぜ業務改善が利益につながるのか。ムダな作業をなくす、時間に余裕が生まれる、コストを見直す、利益改善へ。月40時間削減なら年間72万円相当のモデル試算" loading="lazy" width="1648" height="928"><p class="hs-model-disclaimer">※年間72万円相当は時給1,500円×月40時間×12か月のモデル試算であり、実際の人件費削減や利益増加を保証するものではありません。</p></div></section>
 <section class="shade" id="strength"><div class="container"><h2 class="visually-hidden">Happysugarの強み：御社の仕事にシステムを合わせます</h2><img class="marketing-graphic" data-zip-image="strengths-3points.webp" alt="現場の情報をひとつに、必要な機能だけをシンプルに、導入後も安心サポート。Happysugarの強み" loading="lazy"><div class="image-action"><a class="btn pink" href="https://consult.happysugar.online/">こんなアプリが欲しい！を無料相談する ›</a></div></div></section><section id="cases" class="hs-cases"><div class="container hs-widescreen">
 <div class="sectionhead"><div class="small">BEFORE &amp; AFTER</div><h2>8業種の<span class="orange">改善モデル</span></h2><p class="hs-brief">御社の業種に近い事例を探してみてください。画像の中に、導入前後のイメージとモデル試算をまとめています。</p></div>
 <div class="hs-case-grid"><figure class="hs-case-figure" data-wide-case="case-transport-wide.webp"><div class="hs-case-fallback"><strong>運送・車両管理</strong><span>導入前後の業務改善モデルを表示します</span></div><figcaption>運送・車両管理 <span>モデルケース</span></figcaption></figure>
@@ -237,9 +237,16 @@ const filename=figure.dataset.wideCase;
 const file=zip.file(filename)||Object.values(zip.files).find(item=>!item.dir&&item.name.split('/').pop()===filename);
 if(!file){console.warn('Missing case image:',filename);continue;}
 const blob=await file.async('blob'),url=URL.createObjectURL(blob);
-const img=document.createElement('img');img.alt=figure.querySelector('figcaption').textContent.trim()+'：導入前後の改善モデル画像';img.loading='lazy';img.src=url;
-img.onload=()=>{const fallback=figure.querySelector('.hs-case-fallback');if(fallback)fallback.replaceWith(img)};
-img.onerror=()=>{URL.revokeObjectURL(url);console.warn('Could not display',filename)};
+const img=document.createElement('img');
+img.alt=figure.querySelector('figcaption').textContent.trim()+'：導入前後の改善モデル画像';
+img.loading='lazy';
+img.decoding='async';
+img.onload=()=>{URL.revokeObjectURL(url)};
+img.onerror=()=>{console.warn('Could not display',filename);img.replaceWith(figure.dataset.fallbackText || filename);URL.revokeObjectURL(url)};
+const fallback=figure.querySelector('.hs-case-fallback');
+if(fallback)fallback.replaceWith(img);
+else figure.insertBefore(img,figure.firstChild);
+img.src=url;
 }
 }catch(error){console.warn('導入事例画像の読み込みに失敗:',error)}
 })();</script></body></html>
