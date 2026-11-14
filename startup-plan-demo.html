@@ -1,18 +1,90 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>創業がんばれプラン｜ミニ体験｜Happysugar</title><meta name="description" content="売上と経費をかんたん入力。創業がんばれプランの収支管理を無料でお試し。"><style>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>創業がんばれプラン｜ミニ体験｜Happysugar</title><meta name="description" content="事業用と個人用のお金を分けて入力。創業がんばれプランの収支管理を無料でお試し。"><style>
 :root{--navy:#082f53;--blue:#0b5b8c;--pink:#ec2872;--orange:#f36b13;--ink:#12314d}
 *{box-sizing:border-box}body{margin:0;background:#f3f7fb;color:var(--ink);font-family:"Yu Gothic",Meiryo,system-ui,sans-serif}button,input,select{font:inherit}a{color:inherit}header{background:#fff;box-shadow:0 2px 13px #153a5713}header>div{max-width:1140px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}header img{width:215px;max-width:53vw;height:auto}header a:last-child{font-weight:800;text-decoration:none;color:var(--blue)}
 main{max-width:1100px;margin:auto;padding:26px 18px 70px}.intro{text-align:center;margin:16px auto 22px}.eyebrow{font-weight:900;color:var(--pink);letter-spacing:.14em;font-size:12px}.intro h1{font-size:clamp(26px,4.6vw,43px);color:var(--navy);margin:11px auto}.intro p{line-height:1.8;color:#60768a;max-width:720px;margin:auto}.notice{background:#fff5fa;border:1px solid #f5cada;border-radius:13px;padding:14px 18px;font-size:13px;line-height:1.8;margin:20px auto}
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{background:white;border-radius:15px;border:1px solid #d8e8f2;border-top:5px solid var(--blue);padding:21px 17px;box-shadow:0 7px 24px #1039570e}.metric:nth-child(2){border-top-color:var(--orange)}.metric:nth-child(3){border-top-color:#14a568}.metric span{display:block;color:#5d7385;font-weight:800;font-size:14px}.metric strong{display:block;font-size:clamp(24px,3vw,37px);color:var(--navy);margin-top:10px;font-variant-numeric:tabular-nums}
 .layout{display:grid;grid-template-columns:minmax(260px,.86fr) minmax(0,1.14fr);gap:19px;margin-top:22px}.panel{background:#fff;border:1px solid #d9e7f0;border-radius:17px;overflow:hidden;box-shadow:0 8px 25px #183b5712}.panel h2{font-size:20px;margin:0;background:var(--navy);color:#fff;padding:16px 19px}.panel-body{padding:20px}.switch{display:flex;background:#edf4fa;border-radius:12px;padding:5px;gap:4px;margin-bottom:18px}.switch button{flex:1;border:0;background:transparent;padding:12px 8px;border-radius:9px;cursor:pointer;font-weight:900;color:var(--navy)}.switch button.active{background:#fff;box-shadow:0 2px 8px #1236541f}.switch button.active.expense{background:#fff1e8;color:#d75f0c}label{display:block;font-size:13px;font-weight:900;margin:13px 0 7px}input,select{display:block;width:100%;padding:13px;border:1px solid #cfdde8;border-radius:10px;background:#fff}button.primary{display:block;width:100%;cursor:pointer;border:0;padding:15px;border-radius:12px;background:linear-gradient(110deg,#ff9a17,#ee5907);color:#fff;font-weight:900;margin-top:23px;box-shadow:0 4px 0 #c74908}button:focus-visible,a:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}.small{font-size:12px;color:#697d8c;line-height:1.8}.sheet-top{background:#18865a;color:#fff;padding:14px 18px;font-weight:900;display:flex;align-items:center;gap:9px}.sheet-top span{margin-left:auto;font-size:11px;font-weight:600}.tablewrap{overflow:auto;max-height:355px}table{border-collapse:collapse;min-width:460px;width:100%}th,td{border-bottom:1px solid #e1e9ee;padding:13px 11px;text-align:left;font-size:13px}th{background:#f4f8fa;position:sticky;top:0}td:last-child{text-align:right;font-weight:900;font-variant-numeric:tabular-nums}.incomeText{color:#087d53}.expenseText{color:#d3580e}.controls{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px}.reset{background:#fff;border:1px solid #bccfdc;color:var(--navy);border-radius:9px;padding:8px 12px;cursor:pointer}.cta{background:linear-gradient(120deg,var(--navy),#0b5e96);border-radius:20px;padding:25px;color:white;margin-top:30px;display:flex;justify-content:space-between;gap:18px;align-items:center}.cta h2{margin:0 0 7px}.cta p{margin:0;color:#d4eafa;line-height:1.7}.cta a{background:#f96c13;color:white;text-decoration:none;border-radius:99px;white-space:nowrap;font-weight:900;padding:16px 25px}.price{text-align:center;color:var(--navy);font-size:22px;font-weight:900;margin:26px auto 6px}.price b{color:var(--orange);font-size:30px}.price small{font-size:13px;color:#677789}.explain{text-align:center;color:#627889;line-height:1.7;font-size:13px}
 @media(max-width:720px){.metrics{grid-template-columns:1fr;gap:9px}.metric{padding:14px 16px}.metric strong{margin-top:3px}.layout{grid-template-columns:1fr}.cta{flex-direction:column;align-items:stretch;text-align:center}.cta a{white-space:normal}.panel-body{padding:16px}main{padding:18px 12px 45px}header img{width:160px}}
+
+.account-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:740px;margin:14px auto 8px}.account-switch button{background:#fff;color:#0a3f68;border:2px solid #d2e2ee;border-radius:14px;padding:16px 12px;font-weight:900;cursor:pointer;font-size:clamp(15px,2.2vw,20px)}.account-switch button.active{background:#0a4d80;color:white;border-color:#0a4d80;box-shadow:0 5px 15px #15426722}.account-switch button#personalView.active{background:#d32673;border-color:#d32673}.account-desc{text-align:center;color:#566d7e;font-size:13px;margin:0 auto 22px;line-height:1.6}.separation-example{margin:24px auto 5px;border-radius:14px;background:#fff5fa;border:1px solid #f6cade;padding:16px 22px;line-height:1.8}.separation-example strong{color:#b51963}.separation-example p{margin:5px 0 0;font-size:14px}.account-switch button:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}@media(max-width:500px){.account-switch{gap:7px}.account-switch button{padding:13px 5px;font-size:14px}}
 </style></head><body><header><div><a href="preview-business-redesign.html#plans"><img src="logo.png" alt="Happysugar Business Solutions"></a><a href="preview-business-redesign.html#plans">← プラン紹介に戻る</a></div></header><main>
-<div class="intro"><div class="eyebrow">STARTUP SUPPORT / MINI DEMO</div><h1>創業がんばれプラン <span style="color:var(--pink)">体験版</span></h1><p>売上・経費を入力すると、収支がすぐに見える。<br>まずは3つの操作だけ、お試しください。</p></div>
+<div class="intro"><div class="eyebrow">STARTUP SUPPORT / MINI DEMO</div><h1>創業がんばれプラン <span style="color:var(--pink)">体験版</span></h1><p>事業の売上・経費と、個人のお金を別々に管理。<br>個人の生活費が事業の収支に混ざらない便利さを体験してください。</p></div>
 <div class="notice"><strong>これは体験専用の画面です。</strong> 入力した内容はこのページ内だけで表示し、本番のデータベースやGoogleスプレッドシートには送信しません。個人情報・実際の取引情報は入力しないでください。ページを閉じると追加したデータは消えます。</div>
-<div class="metrics"><div class="metric"><span>売上合計</span><strong id="income">¥0</strong></div><div class="metric"><span>経費合計</span><strong id="expense">¥0</strong></div><div class="metric"><span>収支の差額（簡易）</span><strong id="balance">¥0</strong></div></div>
-<div class="layout"><section class="panel"><h2>① 売上・経費を入力</h2><div class="panel-body"><div class="switch"><button type="button" id="incomeTab" class="active" aria-pressed="true">📈 売上</button><button type="button" id="expenseTab" aria-pressed="false">💰 経費</button></div><form id="form"><label for="kind">内容</label><select id="kind"><option>商品売上</option><option>サービス売上</option><option>その他売上</option></select><label for="amount">金額（円）</label><input id="amount" type="number" required min="1" max="100000000" placeholder="例：12000" inputmode="numeric"><label for="note">メモ（任意）</label><input id="note" maxlength="30" placeholder="例：テスト入力"><button class="primary" type="submit">＋ 入力して収支に反映</button></form><p class="small" role="status" id="status">入力すると右側の管理表に反映されます。</p></div></section>
-<section class="panel"><h2>② 収支を確認</h2><div class="sheet-top">▦ 収支管理シート（イメージ）<span>デモ・自動保存なし</span></div><div class="tablewrap"><table><thead><tr><th>区分</th><th>内容</th><th>メモ</th><th>金額</th></tr></thead><tbody id="rows"></tbody></table></div><div class="panel-body"><div class="controls"><span class="small" id="count"></span><button type="button" class="reset" id="reset">デモを初期化</button></div><p class="small">※実際のGoogleスプレッドシートではありません。本番では業務に合わせた項目・分類・連携方法を設定します。</p></div></section></div>
-<p class="price">月額 <b>11,000円</b> <small>（税込）</small></p><p class="explain">カスタマイズ初期費用は別途お見積り。月額プランの機能・サポート範囲はご相談時にご案内します。</p>
+<div class="account-switch" role="group" aria-label="表示する家計の区分"><button id="businessView" class="active" type="button" aria-pressed="true">🏢 事業のお金</button><button id="personalView" type="button" aria-pressed="false">🏠 個人のお金</button></div><p class="account-desc" id="accountDesc">事業用：事業の売上と必要経費だけを計算しています。</p><div class="metrics"><div class="metric"><span id="incomeLabel">売上合計</span><strong id="income">¥0</strong></div><div class="metric"><span id="expenseLabel">経費合計</span><strong id="expense">¥0</strong></div><div class="metric"><span id="balanceLabel">事業収支（簡易）</span><strong id="balance">¥0</strong></div></div>
+<div class="layout"><section class="panel"><h2 id="inputTitle">① 事業の売上・経費を入力</h2><div class="panel-body"><div class="switch"><button type="button" id="incomeTab" class="active" aria-pressed="true">📈 売上</button><button type="button" id="expenseTab" aria-pressed="false">💰 経費</button></div><form id="form"><label for="kind">内容</label><select id="kind"><option>商品売上</option><option>サービス売上</option><option>その他売上</option></select><label for="amount">金額（円）</label><input id="amount" type="number" required min="1" max="100000000" placeholder="例：12000" inputmode="numeric"><label for="note">メモ（任意）</label><input id="note" maxlength="30" placeholder="例：テスト入力"><button class="primary" type="submit">＋ 入力して収支に反映</button></form><p class="small" role="status" id="status">入力すると右側の管理表に反映されます。</p></div></section>
+<section class="panel"><h2 id="tableTitle">② 事業の収支を確認</h2><div class="sheet-top">▦ <span id="sheetTitle">事業用の収支管理シート</span><span>デモ・自動保存なし</span></div><div class="tablewrap"><table><thead><tr><th>区分</th><th>内容</th><th>メモ</th><th>金額</th></tr></thead><tbody id="rows"></tbody></table></div><div class="panel-body"><div class="controls"><span class="small" id="count"></span><button type="button" class="reset" id="reset">デモを初期化</button></div><p class="small">※実際のGoogleスプレッドシートではありません。本番では事業用・個人用の管理タブを分け、項目・分類をカスタマイズできます。</p></div></section></div>
+<div class="separation-example"><strong>💡 事業用と個人用は別々に集計！</strong><p>例えば、家族の食費を「個人用」に追加しても、「事業用」の経費や収支は変わりません。上のタブを切り替えて確かめてみてね。</p></div><p class="price">月額 <b>11,000円</b> <small>（税込）</small></p><p class="explain">カスタマイズ初期費用は別途お見積り。月額プランの機能・サポート範囲はご相談時にご案内します。</p>
 <div class="cta"><div><h2>「うちの仕事でも使える？」</h2><p>30分無料相談から、ごく簡単なアプリの試作までご相談いただけます。</p></div><a href="https://consult.happysugar.online/">無料相談で詳しく聞く ›</a></div>
 </main><script>
-(()=>{const $=id=>document.getElementById(id),seed=[{type:'income',kind:'商品売上',amount:35000,note:'サンプル'},{type:'income',kind:'サービス売上',amount:18000,note:'サンプル'},{type:'expense',kind:'仕入',amount:12000,note:'サンプル'},{type:'expense',kind:'通信費',amount:3000,note:'サンプル'}];let data=seed.map(x=>({...x}));let type='income';const fmt=n=>'¥'+n.toLocaleString('ja-JP');const update=()=>{const sum=t=>data.filter(x=>x.type===t).reduce((n,x)=>n+x.amount,0),a=sum('income'),b=sum('expense');$('income').textContent=fmt(a);$('expense').textContent=fmt(b);$('balance').textContent=fmt(a-b);const rows=$('rows');rows.replaceChildren();data.forEach(x=>{const tr=document.createElement('tr');[x.type==='income'?'売上':'経費',x.kind,x.note||'—',fmt(x.amount)].forEach((val,i)=>{const td=document.createElement('td');td.textContent=val;if(i===3)td.className=x.type==='income'?'incomeText':'expenseText';tr.appendChild(td)});rows.appendChild(tr)});$('count').textContent=data.length+'件のサンプル・入力データ'};const switchTo=t=>{type=t;const income=t==='income';$('incomeTab').classList.toggle('active',income);$('expenseTab').classList.toggle('active',!income);$('expenseTab').classList.toggle('expense',!income);$('incomeTab').setAttribute('aria-pressed',String(income));$('expenseTab').setAttribute('aria-pressed',String(!income));const options=income?['商品売上','サービス売上','その他売上']:['仕入','消耗品費','通信費','交通費','広告費','その他経費'];$('kind').replaceChildren(...options.map(v=>{const o=document.createElement('option');o.textContent=v;return o}))};$('incomeTab').addEventListener('click',()=>switchTo('income'));$('expenseTab').addEventListener('click',()=>switchTo('expense'));$('form').addEventListener('submit',e=>{e.preventDefault();const n=Number($('amount').value);if(!Number.isInteger(n)||n<=0||n>100000000){$('status').textContent='1円以上の金額を入力してください。';return}data.push({type,kind:$('kind').value,amount:n,note:$('note').value.trim()});$('amount').value='';$('note').value='';$('status').textContent='管理表と収支の合計に反映しました。';update()});$('reset').addEventListener('click',()=>{data=seed.map(x=>({...x}));switchTo('income');$('status').textContent='初期状態に戻しました。';update()});update()})();
+(()=>{const $=id=>document.getElementById(id);
+const seed=[
+{account:'business',type:'income',kind:'商品売上',amount:35000,note:'サンプル'},
+{account:'business',type:'income',kind:'サービス売上',amount:18000,note:'サンプル'},
+{account:'business',type:'expense',kind:'仕入',amount:12000,note:'サンプル'},
+{account:'business',type:'expense',kind:'通信費',amount:3000,note:'サンプル'},
+{account:'personal',type:'income',kind:'生活費入金',amount:60000,note:'サンプル'},
+{account:'personal',type:'expense',kind:'食費',amount:12000,note:'サンプル'},
+{account:'personal',type:'expense',kind:'日用品',amount:4500,note:'サンプル'}
+];
+let data=seed.map(v=>({...v})),account='business',type='income';
+const fmt=n=>'¥'+n.toLocaleString('ja-JP');
+function update(){
+ const current=data.filter(x=>x.account===account);
+ const sum=t=>current.filter(x=>x.type===t).reduce((n,x)=>n+x.amount,0);
+ const income=sum('income'),expense=sum('expense');
+ $('income').textContent=fmt(income);$('expense').textContent=fmt(expense);$('balance').textContent=fmt(income-expense);
+ const rows=$('rows');rows.replaceChildren();
+ current.forEach(x=>{
+  const tr=document.createElement('tr');
+  [x.type==='income'?(account==='business'?'売上':'入金'):(account==='business'?'経費':'支出'),x.kind,x.note||'—',fmt(x.amount)].forEach((value,i)=>{
+   const td=document.createElement('td');td.textContent=value;if(i===3)td.className=x.type==='income'?'incomeText':'expenseText';tr.appendChild(td)});
+  rows.appendChild(tr);
+ });
+ $('count').textContent=current.length+'件（'+(account==='business'?'事業用':'個人用')+'のデータのみ）';
+}
+function switchType(t){
+ type=t;const isIncome=t==='income';
+ $('incomeTab').classList.toggle('active',isIncome);
+ $('expenseTab').classList.toggle('active',!isIncome);
+ $('expenseTab').classList.toggle('expense',!isIncome);
+ $('incomeTab').setAttribute('aria-pressed',String(isIncome));
+ $('expenseTab').setAttribute('aria-pressed',String(!isIncome));
+ $('incomeTab').textContent=isIncome&&account==='personal'?'🏠 入金':account==='personal'?'🏠 入金':'📈 売上';
+ $('expenseTab').textContent=account==='personal'?'🛍 支出':'💰 経費';
+ const options=account==='business'?(isIncome?['商品売上','サービス売上','その他売上']:['仕入','消耗品費','通信費','交通費','広告費','その他経費']):(isIncome?['生活費入金','給与受取','その他入金']:['食費','日用品','家賃','光熱費','趣味・娯楽','その他支出']);
+ $('kind').replaceChildren(...options.map(v=>{const option=document.createElement('option');option.textContent=v;return option}));
+}
+function switchAccount(a){
+ account=a;
+ const business=a==='business';
+ $('businessView').classList.toggle('active',business);
+ $('personalView').classList.toggle('active',!business);
+ $('businessView').setAttribute('aria-pressed',String(business));$('personalView').setAttribute('aria-pressed',String(!business));
+ $('accountDesc').textContent=business?'事業用：事業の売上と必要経費だけを計算しています。':'個人用：生活費など個人のお金だけを計算しています。事業の収支には混ざりません。';
+ $('incomeLabel').textContent=business?'売上合計':'入金合計';
+ $('expenseLabel').textContent=business?'経費合計':'支出合計';
+ $('balanceLabel').textContent=business?'事業収支（簡易）':'個人収支（簡易）';
+ $('inputTitle').textContent=business?'① 事業の売上・経費を入力':'① 個人の入金・支出を入力';
+ $('tableTitle').textContent=business?'② 事業の収支を確認':'② 個人の収支を確認';
+ $('sheetTitle').textContent=business?'事業用の収支管理シート':'個人用の収支管理シート';
+ switchType('income');update();
+ $('status').textContent=business?'事業用のデータだけを表示しています。':'個人用のデータだけを表示しています。';
+}
+$('businessView').addEventListener('click',()=>switchAccount('business'));
+$('personalView').addEventListener('click',()=>switchAccount('personal'));
+$('incomeTab').addEventListener('click',()=>switchType('income'));
+$('expenseTab').addEventListener('click',()=>switchType('expense'));
+$('form').addEventListener('submit',e=>{
+ e.preventDefault();const n=Number($('amount').value);
+ if(!Number.isInteger(n)||n<=0||n>100000000){$('status').textContent='1円以上、1億円以下の金額を入力してください。';return;}
+ data.push({account,type,kind:$('kind').value,amount:n,note:$('note').value.trim()});
+ $('amount').value='';$('note').value='';
+ $('status').textContent=(account==='business'?'事業用':'個人用')+'の管理表に反映しました。もう一方の区分の数字は変わりません。';
+ update();
+});
+$('reset').addEventListener('click',()=>{
+ data=seed.map(x=>({...x}));switchAccount('business');$('status').textContent='サンプルの初期状態に戻しました。';
+});
+switchAccount('business');
+})();
 </script></body></html>
