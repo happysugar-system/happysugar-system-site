@@ -22,10 +22,61 @@
 .strength-card{border-top:5px solid #f37d21}
 @media(max-width:920px){.hero-in{grid-template-columns:1fr}.hero-panel{max-width:600px;min-height:390px}}
 @media(max-width:620px){.hero{background:linear-gradient(130deg,#062d52,#0d527c)}.hero-panel{min-height:340px}}
- .hero-panel{background-position:center 20%}.hero-panel .mini-devices{transform:scale(.92);transform-origin:center bottom}.hero-panel{background-image:linear-gradient(0deg,#ffffffed,#ffffff08 80%),url("https://images.pexels.com/photos/7845076/pexels-photo-7845076.jpeg?auto=compress&cs=tinysrgb&w=1200")}.case-top.photo img{object-position:center 45%}@media(max-width:620px){.hero-panel{background-position:center 18%}} </style></head><body>
+ .hero-panel{background-position:center 20%}.hero-panel .mini-devices{transform:scale(.92);transform-origin:center bottom}.hero-panel{background-image:linear-gradient(0deg,#ffffffed,#ffffff08 80%),url("https://images.pexels.com/photos/7845076/pexels-photo-7845076.jpeg?auto=compress&cs=tinysrgb&w=1200")}.case-top.photo img{object-position:center 45%}@media(max-width:620px){.hero-panel{background-position:center 18%}} 
+/* Flyer-matched first view */
+.hero.hero-flyer{padding:32px 0 36px;background:linear-gradient(100deg,#062a4f 0%,#0b4470 54%,#d8eaf3 100%);overflow:hidden}
+.hero-flyer-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.77fr) minmax(0,.72fr);align-items:stretch;gap:10px}
+.hero-copy{position:relative;z-index:2;padding:10px 0;color:white}
+.hero-copy h1{font-size:clamp(29px,3.3vw,45px);line-height:1.35;margin:15px 0}
+.hero-copy h1 mark{color:#ffdb48;background:transparent}
+.hero-copy p{font-size:14px;line-height:1.8;margin:9px 0}
+.hero-copy .hero-sub{font-weight:900;font-size:15px}
+.hero-points{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:17px 0}
+.hero-points div{background:white;color:#12395b;border-radius:100px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;font-size:11px;font-weight:900;line-height:1.4;border:2px solid #cde3ee}
+.hero-points span{font-size:27px;color:#f67814;line-height:1.2}
+.hero-copy .actions{gap:9px;margin:16px 0 0}
+.hero-copy .btn{font-size:12px;padding:13px 17px;box-shadow:0 3px 0 #c95308}
+.hero-copy .btn.white{box-shadow:none}
+.hero-photo{position:relative;min-height:440px;overflow:visible;align-self:stretch}
+.hero-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%)}
+.hero-screen{position:absolute;z-index:2;bottom:17px;left:-15px;width:86%;border:8px solid #172f40;border-bottom-width:13px;background:#f7fcff;border-radius:12px;box-shadow:0 15px 28px #001a2a75;padding:9px}
+.screen-head{background:#167bb7;color:white;font-size:11px;font-weight:900;padding:7px;border-radius:4px;text-align:center}
+.screen-cols,.screen-data{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;font-size:10px;text-align:center;padding:6px 2px;border-bottom:1px solid #d6e5eb;color:#264560}
+.screen-cols{font-weight:900;background:#e4f2f7}
+.screen-data b{background:#d5f3de;color:#237847;border-radius:5px}
+.hero-phone{position:absolute;z-index:3;right:0;bottom:7px;width:34%;min-width:100px;background:white;border:7px solid #243e51;border-radius:22px;box-shadow:0 8px 22px #0e2d4490;padding:15px 6px 10px;display:flex;flex-direction:column;gap:7px;text-align:center;color:#183850;font-size:10px}
+.hero-phone small{font-weight:900;font-size:10px}
+.hero-phone span{background:#e4f1f6;padding:9px 3px;border-radius:5px}
+.hero-phone strong{background:#1bb15e;color:white;border-radius:6px;padding:8px 2px}
+.hero-benefit{align-self:center;background:#fffffff2;color:#102f4d;border:1px solid #d6e9f3;border-radius:23px;padding:23px 16px;box-shadow:0 8px 25px #14395d25}
+.hero-benefit h2{font-size:clamp(18px,1.9vw,25px);text-align:center;line-height:1.4;margin:0 0 15px}
+.hero-benefit h2 em{color:#ea5c13;font-style:normal}
+.hero-flow{display:grid;gap:10px}
+.hero-flow div{display:flex;align-items:center;gap:9px;border-radius:9px;padding:11px 7px;background:#e5f4fa}
+.hero-flow div:nth-child(2){background:#f0f8eb}
+.hero-flow div:nth-child(3){background:#fff0db}
+.hero-flow span{font-size:25px}
+.hero-flow b{font-size:12px}
+.hero-savings{margin-top:17px;border-top:2px solid #cddfe9;padding-top:12px;text-align:center}
+.hero-savings small{font-size:10px;color:#607589}
+.hero-savings div{font-size:12px;font-weight:900;margin-top:8px}
+.hero-savings strong{font-size:clamp(19px,2.15vw,28px);color:#f2670d}
+.hero-benefit .hero-disclaimer{font-size:10px;color:#6a7a89;line-height:1.6;display:block;margin-top:10px}
+@media(max-width:1050px){.hero-flyer-grid{grid-template-columns:1fr 1fr}.hero-benefit{grid-column:1/-1;display:grid;grid-template-columns:.65fr 1fr 1fr;gap:13px;align-items:center}.hero-benefit h2{margin:0}.hero-savings{margin:0;padding:0;border:0}.hero-photo{min-height:390px}}
+@media(max-width:650px){.hero.hero-flyer{padding:28px 0}.hero-flyer-grid{grid-template-columns:1fr;gap:12px}.hero-copy h1{font-size:36px}.hero-photo{min-height:390px;max-width:500px;width:100%;margin:auto}.hero-benefit{grid-column:auto;display:block}.hero-benefit h2{margin-bottom:15px}.hero-copy .actions{display:flex}.hero-copy .btn{flex:1;font-size:12px}.hero-points{max-width:470px}}
+</style></head><body>
 <header class="top"><div class="container topin"><a class="brand" href="/" aria-label="現行トップページへ"><img src="logo.png" alt="Happysugar Business Solutions"></a><nav class="nav"><a href="#cases">改善モデル</a><a href="#plans">サービス・プラン</a><a href="#sheets">スプシ自動連携</a><a href="#calculator">改善額試算</a><a class="btn pink sm" href="https://consult.happysugar.online/">無料診断はこちら ›</a></nav></div></header>
 <main>
-<div class="hero"><div class="container hero-in"><div><div class="kicker">✦ 中小企業の業務改善をサポート ✦</div><h1>御社に眠る<br><mark>「利益の埋蔵金」</mark>、<br>発掘しませんか？</h1><p>毎日の転記・確認・集計作業。<br>その当たり前の業務に、時間とコストのムダが隠れているかもしれません。</p><p><b>「何を作るか」より「どう変わるか」。</b><br>御社の仕事に合わせて、シンプルで使いやすい仕組みをご提案します。</p><div class="actions"><a class="btn" href="https://consult.happysugar.online/">🔎 無料30分・改善診断</a><a class="btn white" href="#cases">改善モデルを見る ›</a></div><div class="fine" style="color:#c6d7e6">※診断・簡易試算は無料です。試算結果は効果を保証するものではありません。</div></div><div class="hero-panel"><div class="eyebrow">💡 御社の都合に合わせた、使いやすい業務の仕組み</div><div class="mini-devices"><div class="laptop"><div style="background:#1d73a5;color:white;font-size:13px;padding:10px;border-radius:5px">業務管理ダッシュボード</div><div class="tableline"></div><div class="tableline"></div><div class="tableline"></div><div class="tableline"></div></div><div class="phone"><b>スマホで入力</b><span>顧客・受付情報</span><span>作業内容</span><strong>✓ 登録完了</strong></div></div><div class="chips"><span>⏱ 時間を削減</span><span>🪙 コストを見直す</span><span>📈 売上機会を増やす</span><span>👥 人の負担を軽く</span></div></div></div></div>
+<div class="hero hero-flyer"><div class="container"><div class="hero-flyer-grid">
+<div class="hero-copy"><div class="kicker">✦ 中小企業の業務改善をサポート ✦</div>
+<h1>御社に眠る<br><mark>「利益の埋蔵金」</mark>、<br>発掘しませんか？</h1>
+<p>毎日の転記・確認・集計作業。<br>その当たり前の業務に、時間とコストのムダが隠れているかもしれません。</p>
+<p class="hero-sub">御社の仕事に合わせて、<br>シンプルで使いやすい仕組みをご提案します。</p>
+<div class="hero-points"><div><span>◷</span>時間を<br>削減</div><div><span>◉</span>コストを<br>見直す</div><div><span>↗</span>売上機会を<br>増やす</div><div><span>♙</span>人の負担を<br>軽減</div></div>
+<div class="actions"><a class="btn" href="https://consult.happysugar.online/">無料30分・改善診断 ›</a><a class="btn white" href="#cases">改善モデルを見る ›</a></div></div>
+<div class="hero-photo"><img src="https://images.pexels.com/photos/9304662/pexels-photo-9304662.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="オフィスで働くビジネスウーマン（イメージ写真）"><div class="hero-screen"><div class="screen-head">業務管理ダッシュボード</div><div class="screen-cols"><span>予約</span><span>担当</span><span>対応状況</span></div><div class="screen-data"><span>11/16</span><span>佐藤</span><b>完了</b></div><div class="screen-data"><span>11/18</span><span>山田</span><b>対応中</b></div><div class="screen-data"><span>11/20</span><span>田中</span><b>完了</b></div></div><div class="hero-phone"><small>📱 スマホ入力</small><span>予約受付</span><span>日報登録</span><strong>✓ 登録完了</strong></div></div>
+<div class="hero-benefit"><h2>業務改善で<br><em>こんな変化を。</em></h2><div class="hero-flow"><div><span>📋</span><b>作業のムダを減らす</b></div><div><span>⏰</span><b>時間に余裕ができる</b></div><div><span>📈</span><b>売上機会・対応力アップ</b></div></div><div class="hero-savings"><small>例えば、月40時間の作業を削減できた場合</small><div>年間 <strong>480時間</strong></div><div>人件費換算 <strong>72万円相当</strong></div></div><small class="hero-disclaimer">※時給1,500円のモデル試算です。実際の利益増加額や導入実績ではありません。</small></div>
+</div></div></div>
 <div class="ribbon"><div class="container ribbonin"><span>✓ 現場に合わせた設計</span><span>✓ 必要な機能だけ</span><span>✓ Excel・LINEも活用</span></div></div>
 <div class="container"><div class="free-offer"><strong>30分無料相談 ＋ 本当に簡単なアプリ試作まで無料！</strong><p>「こんなことできる？」という相談から、小さなデモを見ながらの検討まで。まずは気軽に試せます。</p><small>無料試作は対象業務1つ・簡単な画面1点を基本としたデモで、範囲は相談時に確認します。本番公開、外部API接続、データ移行、複雑な開発は含みません。</small></div></div><section class="shade" id="why"><div class="container"><div class="sectionhead"><div class="small">WHY BUSINESS IMPROVEMENT?</div><h2>なぜ、業務改善が<span class="orange">利益</span>につながるのか？</h2><p>作業を減らすだけで終わらせず、空いた時間をどこに使うかまで考えます。</p></div><div class="grid four"><div class="benefit"><div class="emoji">📋</div><h3>ムダな作業をなくす</h3><p>転記・確認・集計など、繰り返し作業を減らす</p></div><div class="benefit"><div class="emoji">⏱</div><h3>時間に余裕が生まれる</h3><p>本来の仕事や顧客対応に集中できる</p></div><div class="benefit"><div class="emoji">📈</div><h3>コストを見直す</h3><p>残業削減や対応力向上、機会損失の防止</p></div><div class="benefit"><div class="emoji">💰</div><h3>利益改善へ</h3><p>経費削減や粗利益増加につながる仕組みを目指す</p></div></div><div class="example"><div><b>例えば、1か月40時間の事務作業を削減できた場合</b><div class="fine">時給1,500円 × 40時間 × 12か月のモデル試算</div></div><div class="metric">年間72万円相当</div></div><p class="fine">※削減時間を人件費に換算した金額です。実際の人件費削減や利益増加には、残業削減・人員配置・売上への活用などが必要です。</p></div></section>
 <section class="shade" id="strength"><div class="container"><div class="sectionhead"><div class="small">HAPPYSUGAR'S STRENGTHS</div><h2>システムに仕事を合わせるのではなく、<br><span class="orange">御社の仕事にシステムを合わせます。</span></h2><p>使わない機能を増やさず、現場に必要なものだけを。シンプルで分かりやすいアプリをご提案します。</p></div><div class="grid three"><div class="card strength-card"><div class="cardin"><img class="feature-photo" src="https://images.pexels.com/photos/7653775/pexels-photo-7653775.jpeg?auto=compress&cs=tinysrgb&w=900" alt="相談する仕事風景のイメージ" loading="lazy"><h3>💬 しっかりヒアリング</h3><p>日々の仕事とお困りごとを聞き、改善の優先順位から整理します。</p></div></div><div class="card strength-card"><div class="cardin"><div class="mini-devices"><div class="laptop"><div style="background:#126eaa;color:#fff;padding:7px;font-size:11px">シンプルな管理画面</div><div class="tableline"></div><div class="tableline"></div><div class="tableline"></div></div><div class="phone"><b>スマホ入力</b><span>入力内容</span><strong>登録 ✓</strong></div></div><h3>🛠 必要な機能だけ</h3><p>誰でも迷わず操作できる画面。今あるスプシやLINEも活かせます。</p></div></div><div class="card strength-card"><div class="cardin"><img class="feature-photo" src="https://images.pexels.com/photos/8192014/pexels-photo-8192014.jpeg?auto=compress&cs=tinysrgb&w=900" alt="PC作業をサポートする様子のイメージ" loading="lazy"><h3>📈 導入後もサポート</h3><p>使いながら調整し、成果につながる仕組みを育てていきます。</p></div></div></div></div></section><section id="cases"><div class="container"><div class="sectionhead"><div class="small">BEFORE & AFTER</div><h2>さまざまな業種の<span class="orange">改善モデル</span></h2><p>実際によくある困りごとをもとに、導入前と改善後の姿をイメージできるようにしました。<b>以下はすべてモデルケースであり、実際の導入実績ではありません。</b></p></div><div class="grid four">
