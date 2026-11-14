@@ -186,6 +186,32 @@ html{scroll-padding-top:100px}
 .hs-case-figure img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:contain}
 .hs-case-fallback{aspect-ratio:4/3}
 @media(max-width:850px){.startup-showcase{grid-template-columns:1fr}.startup-description{padding:15px 0}.startup-preview{padding:16px}}
+
+/* Uploaded three-image artwork pack, kept separate from old image ZIP */
+.happysugar-art-banner,.hs-cases-heading{width:100%;max-width:1650px;margin:26px auto 0;position:relative}
+.happysugar-art-banner .hs-banner-art,.hs-cases-heading .hs-banner-art{display:none;width:100%;height:auto;border-radius:16px;object-fit:contain;box-shadow:0 8px 26px #082f5314}
+.happysugar-art-banner.hs-loaded .hs-banner-art,.hs-cases-heading.hs-loaded .hs-banner-art{display:block}
+.happysugar-art-banner .hs-banner-hotspots{display:none}
+.happysugar-art-banner.hs-loaded .hs-banner-hotspots{display:block;position:absolute;inset:0;pointer-events:none}
+.hs-banner-action{position:absolute;top:60%;height:25%;border-radius:999px;pointer-events:auto;cursor:pointer;transition:background .18s,box-shadow .18s}
+.hs-strength-banner .hs-banner-action.first{left:34.5%;width:31.5%}
+.hs-strength-banner .hs-banner-action.second{left:67%;width:30%}
+.hs-cases-banner .hs-banner-action.first{left:42%;width:30%}
+.hs-cases-banner .hs-banner-action.second{left:73%;width:25%}
+.hs-banner-action:hover{background:#ffffff18;box-shadow:inset 0 0 0 3px #ffffff80}
+.hs-banner-action:focus-visible{outline:4px solid #fbbf24;outline-offset:3px}
+.hs-banner-fallback{display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;padding:22px 10px}
+.hs-banner-fallback .btn{font-size:clamp(16px,2vw,23px);padding:18px 35px}
+.happysugar-art-banner.hs-loaded .hs-banner-fallback{display:none}
+.hs-cases-heading{margin:0 auto 25px}.hs-cases-heading.hs-loaded .hs-case-heading-fallback{display:none}
+#cases .hs-cases-heading img{width:100%}
+@media(max-width:720px){
+.happysugar-art-banner,.hs-cases-heading{margin-top:16px}
+.happysugar-art-banner .hs-banner-art,.hs-cases-heading .hs-banner-art{border-radius:7px}
+.happysugar-art-banner.hs-loaded .hs-banner-fallback{display:flex;padding:10px 0}
+.happysugar-art-banner.hs-loaded .hs-banner-fallback .btn{font-size:14px;padding:13px 13px;flex:1;min-width:135px;text-align:center}
+.happysugar-art-banner.hs-loaded .hs-banner-hotspots{display:none}
+}
 </style></head><body>
 <header class="top hs-real-header" id="page-top">
  <div class="hs-header-inner">
@@ -218,8 +244,8 @@ html{scroll-padding-top:100px}
 <img src="free-consultation-banner.png" alt="30分無料相談とごく簡単なアプリの試作も無料。ヒアリングから簡単な試作までご相談いただけます。" loading="lazy" width="2112" height="704">
 <a class="hs-click-zone hs-offer-click" href="https://consult.happysugar.online/" aria-label="無料30分相談・簡単なアプリ試作を申し込む" title="無料相談・アプリ試作を申し込む"></a>
 </div></section><section class="shade hs-why-image" id="why"><div class="container hs-widescreen"><h2 class="visually-hidden">なぜ業務改善が利益につながるのか</h2><img src="why-business-improvement.png" alt="なぜ業務改善が利益につながるのか。ムダな作業をなくす、時間に余裕が生まれる、コストを見直す、利益改善へ。月40時間削減なら年間72万円相当のモデル試算" loading="lazy" width="1648" height="928"><p class="hs-model-disclaimer">※年間72万円相当は時給1,500円×月40時間×12か月のモデル試算であり、実際の人件費削減や利益増加を保証するものではありません。</p></div></section>
-<section class="shade" id="strength"><div class="container"><h2 class="visually-hidden">Happysugarの強み：御社の仕事にシステムを合わせます</h2><img class="marketing-graphic" data-zip-image="strengths-3points.webp" alt="現場の情報をひとつに、必要な機能だけをシンプルに、導入後も安心サポート。Happysugarの強み" loading="lazy"><div class="image-action"><a class="btn pink" href="https://consult.happysugar.online/">こんなアプリが欲しい！を無料相談する ›</a></div></div></section><section id="cases" class="hs-cases"><div class="container hs-widescreen">
-<div class="sectionhead"><div class="small">BEFORE &amp; AFTER</div><h2>8業種の<span class="orange">改善モデル</span></h2><p class="hs-brief">御社の業種に近い事例を探してみてください。画像の中に、導入前後のイメージとモデル試算をまとめています。</p></div>
+<section class="shade" id="strength"><div class="container"><h2 class="visually-hidden">Happysugarの強み：御社の仕事にシステムを合わせます</h2><img class="marketing-graphic" data-zip-image="strengths-3points.webp" alt="現場の情報をひとつに、必要な機能だけをシンプルに、導入後も安心サポート。Happysugarの強み" loading="lazy"><div class="happysugar-art-banner hs-strength-banner" aria-label="無料相談・アプリの試作について相談する・アプリを体験する"><img class="hs-banner-art" data-hp3="strength-cta-banner.png" alt="無料相談・アプリの試作について相談する と アプリを体験する を選べるHappysugarのご案内" loading="lazy"><div class="hs-banner-hotspots"><a class="hs-banner-action first" href="https://consult.happysugar.online/" aria-label="無料相談・アプリの試作について相談する" title="無料相談・アプリの試作について相談する"></a><a class="hs-banner-action second" href="demo.html" aria-label="アプリを体験する" title="アプリを体験する"></a></div><div class="hs-banner-fallback"><a class="btn pink" href="https://consult.happysugar.online/">無料相談・アプリの試作について相談する ›</a><a class="btn white" href="demo.html">アプリを体験する ›</a></div></div></div></section><section id="cases" class="hs-cases"><div class="container hs-widescreen">
+<div class="hs-cases-heading"><img class="hs-banner-art" data-hp3="cases-heading-banner.png" alt="8業種の改善モデル。御社の業種に近い事例を探してみてください。導入前後のイメージとモデル試算を掲載。" loading="lazy"><div class="hs-case-heading-fallback sectionhead"><div class="small">BEFORE &amp; AFTER</div><h2>8業種の<span class="orange">改善モデル</span></h2><p>御社の業種に近い事例を探してみてください。画像内にモデル試算をまとめています。</p></div></div>
 <div class="hs-case-grid"><figure class="hs-case-figure" data-wide-case="case-transport-wide.webp"><div class="hs-case-fallback"><strong>運送・車両管理</strong><span>導入前後の業務改善モデルを表示します</span></div><figcaption>運送・車両管理 <span>モデルケース</span></figcaption></figure>
 <figure class="hs-case-figure" data-wide-case="case-restaurant-wide.webp"><div class="hs-case-fallback"><strong>飲食店</strong><span>導入前後の業務改善モデルを表示します</span></div><figcaption>飲食店 <span>モデルケース</span></figcaption></figure>
 <figure class="hs-case-figure" data-wide-case="case-ecommerce-wide.webp"><div class="hs-case-fallback"><strong>EC・小売</strong><span>導入前後の業務改善モデルを表示します</span></div><figcaption>EC・小売 <span>モデルケース</span></figcaption></figure>
@@ -229,7 +255,7 @@ html{scroll-padding-top:100px}
 <figure class="hs-case-figure" data-wide-case="case-care-wide.webp"><div class="hs-case-fallback"><strong>介護・訪問サービス</strong><span>導入前後の業務改善モデルを表示します</span></div><figcaption>介護・訪問サービス <span>モデルケース</span></figcaption></figure>
 <figure class="hs-case-figure" data-wide-case="case-manufacturing-wide.webp"><div class="hs-case-fallback"><strong>製造業</strong><span>導入前後の業務改善モデルを表示します</span></div><figcaption>製造業 <span>モデルケース</span></figcaption></figure></div>
 <p class="hs-case-note">※画像内の時間・金額は条件を仮定したモデル試算であり、実際の導入実績や成果を示すものではありません。飲食店の売上増は利益増を意味しません。</p>
-<p class="center"><a class="btn" href="https://consult.happysugar.online/">自社の改善効果を無料相談する ›</a></p></div></section>
+<div class="happysugar-art-banner hs-cases-banner" aria-label="自社の改善効果を無料相談する・アプリを体験する"><img class="hs-banner-art" data-hp3="cases-cta-banner.png" alt="自社の改善効果を無料相談する と アプリを体験する を選べるHappysugarのご案内" loading="lazy"><div class="hs-banner-hotspots"><a class="hs-banner-action first" href="https://consult.happysugar.online/" aria-label="自社の改善効果を無料相談する" title="自社の改善効果を無料相談する"></a><a class="hs-banner-action second" href="demo.html" aria-label="アプリを体験する" title="アプリを体験する"></a></div><div class="hs-banner-fallback"><a class="btn pink" href="https://consult.happysugar.online/">自社の改善効果を無料相談する ›</a><a class="btn white" href="demo.html">アプリを体験する ›</a></div></div></div></section>
 <section class="shade" id="sheets"><div class="container hs-widescreen"><div class="sectionhead"><div class="small">APP → GOOGLE SHEETS</div><h2>スタッフは<span class="orange">アプリで入力。</span>管理者はスプシで確認。</h2><p>転記の手間を減らす仕組みを、予約・日報・売上経費などに応用できます。</p></div>
 <img class="marketing-graphic hs-wide-art" data-zip-image="service-app-to-sheets.webp" alt="アプリで入力したデータがスプレッドシートに反映される業務管理のイメージ" loading="lazy">
 <div class="hs-demo-banner"><div><strong>入力 → 自動連携 → 管理表</strong><p>実際の入力画面と管理表風の表示を試せます。デモは外部サービスに保存しません。</p></div><a class="btn" href="demo.html">入力アプリを体験 ›</a></div>
@@ -283,4 +309,20 @@ html{scroll-padding-top:100px}
   }catch(error){console.warn('画像の展開失敗:',filename,error)}
  }
  console.info('導入事例の画像元:',source);
+})();</script><script>(async function(){
+ if(!window.JSZip)return;
+ try{
+  const res=await fetch('happysugar-hp-3-banners-github.zip',{cache:'no-cache'});
+  if(!res.ok)throw new Error('バナーZIP '+res.status);
+  const zip=await JSZip.loadAsync(await res.arrayBuffer());
+  for(const img of document.querySelectorAll('img[data-hp3]')){
+   const file=zip.file(img.dataset.hp3);
+   if(!file){console.warn('バナー画像がZIPにありません:',img.dataset.hp3);continue}
+   const blob=await file.async('blob'),url=URL.createObjectURL(blob);
+   img.onload=()=>{img.parentElement.classList.add('hs-loaded')};
+   img.onerror=()=>{console.warn('バナー画像読み込みエラー:',img.dataset.hp3);URL.revokeObjectURL(url)};
+   img.src=url;
+   if(img.complete&&img.naturalWidth>0)img.parentElement.classList.add('hs-loaded');
+  }
+ }catch(error){console.warn('バナー3枚セットの読み込みに失敗',error)}
 })();</script></body></html>
