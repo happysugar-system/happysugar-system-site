@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://system.happysugar.online/sitemap.xml
